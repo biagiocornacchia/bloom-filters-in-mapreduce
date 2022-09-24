@@ -10,8 +10,8 @@ The project consists in :
 
 ## Some requirements
 In the Hadoop implementation, we had to use the following classes:
-- `org.apache.hadoop.mapreduce.lib.input.NLineInputFormat`: splits N lines of input as one split;
-- `org.apache.hadoop.util.hash.Hash.MURMUR_HASH`: the hash function family to use.
+- `org.apache.hadoop.mapreduce.lib.input.NLineInputFormat`: splits N lines of input as one split
+- `org.apache.hadoop.util.hash.Hash.MURMUR_HASH`: the hash function family to use
 
 In the Spark implementation, we had to use/implement analogous classes.
 
@@ -27,7 +27,7 @@ where:
 - `output_dir` is the name of the output directory
 - `100000` is the number of lines of each split
 - `0.0001` is the p value chosen
-- `1`  is the version to put into execution for the job2. In the version `1` the Mapper emits an array of bloom filters exploiting the in-mapper combiner pattern. In the version version `2` the Mapper emits the bit positions (set to one) of the bloom filter.
+- `1`  is the version to put into execution for the job2. In the version `1` the Mapper emits an array of bloom filters exploiting the in-mapper combiner pattern. In the version `2` the Mapper emits the bit positions (set to one) of the bloom filter.
 
 ## Spark Execution
 
